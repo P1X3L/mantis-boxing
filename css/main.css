@@ -70,12 +70,20 @@ body {
 }
 
 .main > header {
+  position: relative;
   padding: 69px 0 51px 0;
   text-align: center;
   font: normal 85px/70px "mantis";
-  background: url('../images/logo2.png') 61px 16px no-repeat, url('../images/logo1.png') 787px 0 no-repeat;
-  background-size: 135px, auto;
+  overflow: hidden;
+  background: url('../images/logo2.png') 61px 16px no-repeat;
+  background-size: 135px;
   background-color: white;
+}
+.main > header::after {
+  position: absolute;
+  top: 0;
+  right: -112px;
+  content: url('../images/logo1.png');
 }
 
 .main > header small {
