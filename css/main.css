@@ -63,11 +63,10 @@ body {
 .main::before {
   position: absolute;
   right: 100%;
-  width: 300px;
+  width: 270px;
   height: 300px;
   content: "";
   background: url('../images/background.jpg') top left no-repeat;
-  background-size: 450px;
 }
 
 .main > header {
@@ -199,17 +198,23 @@ article h2 {
   font-size: 20px;
   padding-bottom: 10px;
 }
+article h2 + .picture {
+  padding-top: 0;
+}
 
 article iframe {
   display: block;
   margin: 0 auto;
 }
-.profile .avatar {
+.avatar {
   float: left;
   clear: left;
 }
-.profile .avatar {
+.avatar {
   padding-right: 15px;
+}
+.avatar img {
+  display: block;
 }
 article li {
   list-style-type: none;
@@ -228,9 +233,6 @@ article li .focus ~ p {
 article li .precision {
   margin-left: 4px;
   font-style: italic;
-}
-img {
-  display: block;
 }
 b {
   font-family: "gothambold";
