@@ -1,0 +1,207 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  height: 100%;
+  background-color: black;
+}
+
+body {
+  height: 100%;
+  line-height: 1;
+  overflow: auto;
+}
+
+@font-face {
+  font-family: "mantis";
+  src: url('../fonts/mantis.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "gotham";
+  src: url('../fonts/gotham.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "gothambold";
+  src: url('../fonts/gothambold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "gothamcondensed";
+  src: url('../fonts/gothamcondensed.otf') format('opentype');
+}
+
+.main {
+  position: relative;
+  width: 60%;
+  font-size: 14px;
+  font-family: "gothamcondensed";
+  min-width: 800px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main::before {
+  position: absolute;
+  right: 100%;
+  width: 300px;
+  height: 300px;
+  content: "";
+  background: url('../images/background.jpg') top left no-repeat;
+  background-size: 450px;
+}
+
+.main > header {
+  padding: 69px 0 51px 0;
+  text-align: center;
+  font: normal 85px/70px "mantis";
+  background: url('../images/logo3.png') 61px 16px no-repeat, url('../images/logo.png') 787px 0 no-repeat;
+  background-size: 148px, 331px;
+  background-color: white;
+}
+
+.main > header small {
+  display: block;
+  text-transform: uppercase;
+  text-indent: 11px;
+  font: normal 20px "gotham";
+  letter-spacing: 11px;
+}
+
+.main > nav {
+  position: relative;
+  font-family: "gotham";
+  color: black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: white;
+}
+.main > nav li {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+.main > nav p,
+.main > nav > ul > li:last-child a {
+  min-width: 65px;
+}
+.main > nav p,
+.main > nav a {
+  display: inline-block;
+  padding: 7px 10px;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+}
+.main > nav .active,
+.main > nav p:hover,
+.main > nav a:hover {
+  -webkit-box-shadow: 0px 10px 0px -8px black inset;
+  -o-box-shadow: 0px 10px 0px -8px black inset;
+  -moz-box-shadow: 0px 10px 0px -8px black inset;
+  -ms-box-shadow: 0px 10px 0px -8px black inset;
+  box-shadow: 0px 10px 0px -8px black inset;
+}
+
+.main > nav ul ul {
+  position: absolute;
+  top: 100%;
+  height: 0;
+  overflow: hidden;
+  border: 1px solid black;
+  border-top: 0;
+  background-color: white;
+  -webkit-transition: height 200ms;
+  -o-transition: height 200ms;
+  -moz-transition: height 200ms;
+  -ms-transition: height 200ms;
+  transition: height 200ms;
+  z-index: 1;
+}
+.main > nav ul ul .active,
+.main > nav ul ul a:hover {
+  font-family: "gothambold";
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+}
+.main > nav p {
+  cursor: default;
+}
+
+.main > nav li:hover {
+  overflow: visible;
+}
+.main > nav li:hover ul,
+.main > nav li li {
+  display: block;
+}
+
+.main > nav li:hover ul {
+  height: 56px;
+}
+
+.main > section {
+  margin-top: 28px;
+  padding: 15px;
+  background-color: white;
+}
+
+.picture {
+  padding: 15px 0;
+  text-align: center;
+}
+.picture img {
+  max-width: 100%;
+}
+
+article {
+  font-size: 17px;
+  line-height: 20px;
+}
+article:not(:last-child) {
+  margin-bottom: 15px;
+}
+article h1 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+article iframe {
+  display: block;
+  margin: 0 auto;
+}
+article li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.upper {
+  text-transform: uppercase;
+}
+.italic {
+  font-style: italic;
+}
