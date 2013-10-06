@@ -53,8 +53,8 @@ body {
 .main {
   position: relative;
   width: 60%;
-  font-size: 14px;
-  font-family: "gothamcondensed";
+  font-size: 13px;
+  font-family: "gotham";
   min-width: 800px;
   max-width: 1200px;
   margin: 0 auto;
@@ -74,8 +74,8 @@ body {
   padding: 69px 0 51px 0;
   text-align: center;
   font: normal 85px/70px "mantis";
-  background: url('../images/logo3.png') 61px 16px no-repeat, url('../images/logo.png') 787px 0 no-repeat;
-  background-size: 148px, 331px;
+  background: url('../images/logo2.png') 61px 16px no-repeat, url('../images/logo1.png') 787px 0 no-repeat;
+  background-size: 135px, auto;
   background-color: white;
 }
 
@@ -89,6 +89,7 @@ body {
 
 .main > nav {
   position: relative;
+  font-size: 14px;
   font-family: "gotham";
   color: black;
   border-top: 1px solid black;
@@ -108,7 +109,7 @@ body {
 .main > nav p,
 .main > nav a {
   display: inline-block;
-  padding: 7px 10px;
+  padding: 7px 15px;
   text-transform: uppercase;
   color: inherit;
   text-decoration: none;
@@ -178,30 +179,78 @@ body {
 }
 
 article {
-  font-size: 17px;
   line-height: 20px;
+}
+article::after {
+  display: block;
+  clear: both;
+  content: "";
 }
 article:not(:last-child) {
   margin-bottom: 15px;
 }
-article h1 {
+.main > section h1 {
   margin-bottom: 10px;
   text-transform: uppercase;
   font-size: 20px;
-  font-weight: bold;
+  font-family: "gothambold";
+}
+article h2 {
+  font-size: 20px;
+  padding-bottom: 10px;
 }
 
 article iframe {
   display: block;
   margin: 0 auto;
 }
+.profile .avatar {
+  float: left;
+  clear: left;
+}
+.profile .avatar {
+  padding-right: 15px;
+}
 article li {
-  list-style-type: disc;
-  list-style-position: inside;
+  list-style-type: none;
+  margin: 10px 0;
+}
+article li .focus {
+  display: inline-block;
+  width: 120px;
+  margin-right: 4px;
+  text-align: right;
+  font-family: "gothambold";
+}
+article li .focus ~ p {
+  margin-left: 124px;
+}
+article li .precision {
+  margin-left: 4px;
+  font-style: italic;
+}
+img {
+  display: block;
+}
+b {
+  font-family: "gothambold";
 }
 .upper {
   text-transform: uppercase;
 }
-.italic {
+
+.hint {
   font-style: italic;
+}
+
+.hint::before {
+  display: inline-block;
+  content: "*";
+  width: 20px;
+  margin-right: 4px;
+  text-align: right;
+}
+
+.hint.more::before {
+  content: "**";
 }
