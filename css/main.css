@@ -186,6 +186,7 @@ body {
 }
 
 article {
+  position: relative;
   line-height: 20px;
 }
 article::after {
@@ -262,6 +263,12 @@ a {
   text-decoration: none;
   color: inherit;
 }
+address {
+  position: absolute;
+  bottom: 0;
+  left: 315px;
+}
+address a,
 b {
   font-family: "gothambold";
 }
