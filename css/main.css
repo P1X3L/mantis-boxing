@@ -54,20 +54,18 @@ body {
 }
 
 @font-face {
-  font-family: "gothambold";
-  src: url('../fonts/gothambold.otf') format('opentype');
-}
-
-@font-face {
-  font-family: "gothamcondensed";
-  src: url('../fonts/gothamcondensed.otf') format('opentype');
+    font-family: 'gothambold';
+    src: url('../fonts/gothambold.otf');
+    src: url('../fonts/gothambold.otf?#iefix') format('embedded-opentype'),
+    font-weight: normal;
+    font-style: normal;
 }
 
 .main {
   position: relative;
   width: 60%;
   font-size: 13px;
-  font-family: "gotham";
+  font-family: "gotham", "Myriad pro";
   min-width: 800px;
   max-width: 1200px;
   margin: 0 auto;
