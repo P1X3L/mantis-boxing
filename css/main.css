@@ -149,11 +149,6 @@ body {
   border: 1px solid black;
   border-top: 0;
   background-color: white;
-  -webkit-transition: height 200ms;
-  -o-transition: height 200ms;
-  -moz-transition: height 200ms;
-  -ms-transition: height 200ms;
-  transition: height 200ms;
   z-index: 1;
 }
 .main > nav ul ul .active,
@@ -272,7 +267,9 @@ footer a:hover {
   font-family: "gothambold";
 }
 
-a {
+a,
+a:active,
+a:visited {
   text-decoration: none;
   color: inherit;
 }
@@ -303,4 +300,61 @@ b {
 
 .hint.more::before {
   content: "**";
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.back:hover::before {
+  margin: 2px 5px 0 0;
+  content: "\21a9";
+}
+
+/* image teasing article */
+.teaser {
+  position: relative;
+  padding-top: 15px;
+}
+.teaser a p,
+.teaser a::after,
+.main > nav ul ul {
+  -webkit-transition: 200ms;
+  -o-transition: 200ms;
+  -moz-transition: 200ms;
+  -ms-transition: 200ms;
+  transition: 200ms;
+}
+.teaser a::after {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  bottom: 0;
+  left: -15px;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
+  content: "- Cliquez pour en voir plus -";
+  color: white;
+  line-height: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.teaser a:hover::after {
+  opacity: 1;
+}
+.teaser a:hover p {
+  color: white;
+}
+.teaser p:not(.picture) {
+  position: relative;
+  z-index: 1;
+}
+.teaser .picture {
+  padding: 15px 0 0 0;
+}
+.teaser .picture img {
+  float: left;
+  display: block;
+  width: 20%;
 }
