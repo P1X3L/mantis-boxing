@@ -183,11 +183,12 @@ body {
 }
 
 .picture {
-  padding: 15px 0;
+  margin: 15px 0;
   text-align: center;
 }
 .picture img {
   max-width: 100%;
+  display: block;
 }
 
 article {
@@ -212,8 +213,11 @@ article h2 {
   font-size: 20px;
   padding-bottom: 10px;
 }
+article p:last-child {
+  margin-bottom: 0;
+}
 article h2 + .picture {
-  padding-top: 0;
+  margin-top: 0;
 }
 
 article iframe {
@@ -338,7 +342,13 @@ b {
   content: "- Cliquez pour en voir plus -";
   color: white;
   line-height: 200px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: -moz-linear-gradient(left, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgb(0, 0, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgb(0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgb(0, 0, 0)));
+  background: -webkit-linear-gradient(left, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgb(0, 0, 0) 100%);
+  background: -o-linear-gradient(left, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgb(0, 0, 0) 100%);
+  background: -ms-linear-gradient(left, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgb(0, 0, 0) 100%);
+  background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgb(0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000', GradientType=1); /* IE6-9 */
 }
 .teaser a:hover::after {
   opacity: 1;
