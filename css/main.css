@@ -213,6 +213,22 @@ article h2 {
   font-size: 20px;
   padding-bottom: 10px;
 }
+.index article h3 {
+  text-decoration: underline;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.index article ul {
+  padding-left: 20px;
+}
+.index article ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.index article p {
+  margin: 20px 0;
+}
+
 article p:last-child {
   margin-bottom: 0;
 }
@@ -249,7 +265,7 @@ article li .focus {
   font-family: "gothambold";
 }
 article li .focus ~ p {
-  margin-left: 124px;
+  margin-left: 128px;
 }
 article li .precision {
   margin-left: 4px;
@@ -277,6 +293,14 @@ a:visited {
   text-decoration: none;
   color: inherit;
 }
+
+a.link {
+  color: rgb(232, 20, 43);
+}
+a.link:hover {
+  text-decoration: underline;
+}
+
 address {
   position: absolute;
   bottom: 0;
@@ -367,4 +391,28 @@ i, .hint {
   float: left;
   display: block;
   width: 20%;
+}
+
+/* utility classes */
+.red {
+  color: rgb(232, 20, 43) !important;
+}
+
+.img-link {
+  display: block;
+  margin: 25px 0;
+  text-align: center;
+}
+.img-link a {
+  transition: -webkit-filter 200ms, -moz-filter 200ms, -ms-filter 200ms, filter 200ms;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.img-link a:hover {
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  filter: none;
 }
